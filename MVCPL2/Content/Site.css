@@ -46,15 +46,19 @@ input[type="checkbox"].input-validation-error {
     /*padding: 0;*/
 }
 
+.navbar-inverse {
+  background-color: #3A539B;
+  border-color: transparent;
+}
+
 .right{
     float: right;
     /*padding: 0;*/
 }
 
 .thumbnail{
-    display inline-block
-    vertical-align top
-    width: 30%;
+    padding-top: 20px;
+    vertical-align: central;
 }
 
 .validation-summary-errors {
