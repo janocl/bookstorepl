@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BookStore" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBookStore_CreateBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBook" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_CreateBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_RetrieveBookByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBookByID" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_RetrieveBookByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveBookByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_UpdateBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBook" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_UpdateBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_DeleteBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBook" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_DeleteBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_GetAllBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBooks" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_GetAllBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_GetAllEditoriales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEditoriales" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_GetAllEditoriales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEditorialesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_GetAllRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRecord" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_GetAllRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_FilterBookByEditorialID_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilterBookByEditorialID" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_FilterBookByEditorialID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilterBookByEditorialIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_FilterBookByTitulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilterBookByTitulo" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_FilterBookByTitulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilterBookByTituloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_CreateEditorial_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEditorial" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_CreateEditorial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEditorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_FilterBookByEditorial_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilterBookByEditorial" />
+  </wsdl:message>
+  <wsdl:message name="IBookStore_FilterBookByEditorial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilterBookByEditorialResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBookStore">
+    <wsdl:operation name="CreateBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/CreateBook" message="tns:IBookStore_CreateBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/CreateBookResponse" message="tns:IBookStore_CreateBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBookByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/RetrieveBookByID" message="tns:IBookStore_RetrieveBookByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/RetrieveBookByIDResponse" message="tns:IBookStore_RetrieveBookByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/UpdateBook" message="tns:IBookStore_UpdateBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/UpdateBookResponse" message="tns:IBookStore_UpdateBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/DeleteBook" message="tns:IBookStore_DeleteBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/DeleteBookResponse" message="tns:IBookStore_DeleteBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/GetAllBooks" message="tns:IBookStore_GetAllBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/GetAllBooksResponse" message="tns:IBookStore_GetAllBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEditoriales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/GetAllEditoriales" message="tns:IBookStore_GetAllEditoriales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/GetAllEditorialesResponse" message="tns:IBookStore_GetAllEditoriales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/GetAllRecord" message="tns:IBookStore_GetAllRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/GetAllRecordResponse" message="tns:IBookStore_GetAllRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterBookByEditorialID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/FilterBookByEditorialID" message="tns:IBookStore_FilterBookByEditorialID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/FilterBookByEditorialIDResponse" message="tns:IBookStore_FilterBookByEditorialID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterBookByTitulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/FilterBookByTitulo" message="tns:IBookStore_FilterBookByTitulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/FilterBookByTituloResponse" message="tns:IBookStore_FilterBookByTitulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEditorial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/CreateEditorial" message="tns:IBookStore_CreateEditorial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/CreateEditorialResponse" message="tns:IBookStore_CreateEditorial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterBookByEditorial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookStore/FilterBookByEditorial" message="tns:IBookStore_FilterBookByEditorial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookStore/FilterBookByEditorialResponse" message="tns:IBookStore_FilterBookByEditorial_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBookStore" type="tns:IBookStore">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateBook">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/CreateBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveBookByID">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/RetrieveBookByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/UpdateBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/DeleteBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBooks">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/GetAllBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEditoriales">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/GetAllEditoriales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRecord">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/GetAllRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterBookByEditorialID">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/FilterBookByEditorialID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterBookByTitulo">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/FilterBookByTitulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEditorial">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/CreateEditorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterBookByEditorial">
+      <soap:operation soapAction="http://tempuri.org/IBookStore/FilterBookByEditorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BookStore">
+    <wsdl:port name="BasicHttpBinding_IBookStore" binding="tns:BasicHttpBinding_IBookStore">
+      <soap:address location="http://vmbookstore14.cloudapp.net/sl/BookStore.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

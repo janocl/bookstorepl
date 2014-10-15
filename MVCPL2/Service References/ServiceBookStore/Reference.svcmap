@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="17bf35f4-b690-4486-9263-2849e629ffba" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vmbookstore14.cloudapp.net/sl/BookStore.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BookStore.disco" MetadataType="Disco" ID="e26cd251-fca2-4448-98b1-86ca97923de7" SourceId="1" SourceUrl="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?disco" />
+    <MetadataFile FileName="BookStore.xsd" MetadataType="Schema" ID="32b1f438-1693-4e43-a3dc-04334a853764" SourceId="1" SourceUrl="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?xsd=xsd1" />
+    <MetadataFile FileName="BookStore.wsdl" MetadataType="Wsdl" ID="af4c5237-97bc-4368-a483-21d2cb7700b5" SourceId="1" SourceUrl="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?wsdl" />
+    <MetadataFile FileName="BookStore1.xsd" MetadataType="Schema" ID="2f665476-f137-41a3-80c9-f9706df10e1f" SourceId="1" SourceUrl="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?xsd=xsd2" />
+    <MetadataFile FileName="BookStore2.xsd" MetadataType="Schema" ID="7a843ce5-6f27-4572-a2cb-9e8df9833458" SourceId="1" SourceUrl="http://vmbookstore14.cloudapp.net/sl/BookStore.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
