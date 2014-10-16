@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MVCPL2.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController2 : Controller
     {
         // GET: Home
         public ActionResult Index()
@@ -15,11 +15,9 @@ namespace MVCPL2.Controllers
         }
 
         // GET: Home/Details/5
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-            var proxy = new ServiceBookStore.BookStoreClient();
-            var libros = proxy.GetAllBooks();
-            return View("ListaLibros", libros);
+            return View();
         }
 
         // GET: Home/Create
